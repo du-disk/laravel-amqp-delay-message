@@ -1,0 +1,62 @@
+{
+  "name": "du-disk/laravel-amqp-delay-message",
+  "description": "AMQP wrapper for Laravel and Lumen to publish and consume messages",
+  "keywords": [
+    "laravel",
+    "lumen",
+    "laravel5",
+    "rabbitmq",
+    "amqp",
+    "queue",
+    "package",
+    "message queue",
+    "Björn Schmitt",
+    "bschmitt",
+	"du-disk"
+  ],
+  "license": "MIT",
+  "support": {
+      "issues": "https://github.com/du-disk/laravel-amqp-delay-message/issues",
+      "source": "https://github.com/du-disk/laravel-amqp-delay-message"
+  },
+  "authors": [
+    {
+    "name": "Dudi.I",
+    "email": "dudyiskandar325@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.3|^8.0",
+    "php-amqplib/php-amqplib": "^3.0",
+    "illuminate/support": ">=6.20.0"
+  },
+  "require-dev": {
+    "illuminate/config": ">=5.5",
+    "mockery/mockery": "^1.2",
+    "phpoption/phpoption": "1.7.x-dev",
+    "phpunit/phpunit": ">=6.0",
+    "squizlabs/php_codesniffer": "^3.0@dev",
+    "vlucas/phpdotenv": "^5.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Brodud\\Amqp\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Brodud\\Amqp\\Test\\": "test/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Brodud\\Amqp\\AmqpServiceProvider"
+      ],
+      "aliases": {
+        "Amqp": "Brodud\\Amqp\\Facades\\Amqp"
+      }
+    }
+  },
+  "minimum-stability": "dev"
+}
